@@ -1,0 +1,32 @@
+# Edtools Labs
+
+> Open-source AI STEAM tutor that teaches kinematics with voice, an Excalidraw-style canvas and the phone's tilt sensors. Bilingual EN/ES. Built with Claude Opus 4.7.
+
+## Product
+
+- AI tutor for STEAM, focused on physics and kinematics (MRU, MRUA, free fall, velocity vs speed).
+- Three teaching channels in a single flow:
+  - Voice (Web Speech API and Kokoro TTS) for narration in sync with the canvas.
+  - Excalidraw-style canvas for diagrams, vectors and conceptual graphs.
+  - Smartphone tilt sensors (Device Orientation API) for hands-on mini-labs.
+- Inline mini-labs follow a Predict, Measure, Reflect cycle and return automatically to the lesson with handoff context.
+- Bilingual EN/ES across UI, voice and prompts. Languages can be switched without losing progress.
+- Demo mode runs the full UI without an API key for evaluation and prototyping.
+- Progress is stored in localStorage and surfaced to the model so suggestions evolve over time.
+
+## Open source
+
+- License: GPL-3.0
+- Repository: https://github.com/soyandresalcedo/Edtools-labs-landing
+- Stack: Next.js 14, TypeScript, Tailwind CSS, shadcn/ui, Anthropic Claude.
+
+## How to use
+
+- Try the demo at https://labs.edtools.co.
+- Self-host by cloning the repo and configuring `.env.local`, or enabling demo mode for a no-key evaluation.
+- Mobile use is recommended over HTTPS so tilt sensors are available; a desktop slider fallback exists.
+
+## Pages
+
+- Landing: https://labs.edtools.co
+- GitHub: https://github.com/soyandresalcedo/Edtools-labs-landing

@@ -62,9 +62,9 @@ export default function DocumentationSection() {
             }
             text="Topic recipes"
           />
-          <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
+          <h2 className="self-stretch m-0 text-center text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
             A lesson for every motion.
-          </div>
+          </h2>
           <div className="self-stretch text-center text-[#605A57] text-base font-normal leading-7 font-sans">
             Each topic is a recipe: voice, drawings and a mini-lab
             <br />
