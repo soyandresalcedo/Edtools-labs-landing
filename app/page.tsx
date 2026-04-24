@@ -304,14 +304,14 @@ export default function LandingPage() {
 
                   <div className="flex-1 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-0 border-l border-r border-[rgba(55,50,47,0.12)]">
                     {[
-                      { name: "Claude", logo: "/horizon-icon.svg" },
-                      { name: "Next.js", logo: "/vercel-triangle-logo.jpg" },
-                      { name: "Excalidraw", logo: "/horizon-icon.svg" },
-                      { name: "Web Speech", logo: "/horizon-icon.svg" },
-                      { name: "Kokoro TTS", logo: "/horizon-icon.svg" },
-                      { name: "TypeScript", logo: "/horizon-icon.svg" },
-                      { name: "Tailwind", logo: "/tailwind-css-logo.png" },
-                      { name: "GitHub", logo: "/github-logo-icon.jpg" },
+                      { name: "Claude", logo: "/logo-anthropic.svg" },
+                      { name: "Next.js", logo: "/logo-nextdotjs.svg" },
+                      { name: "TypeScript", logo: "/logo-typescript.svg" },
+                      { name: "Tailwind", logo: "/logo-tailwindcss.svg" },
+                      { name: "Excalidraw", logo: "/logo-excalidraw.svg" },
+                      { name: "Vercel", logo: "/logo-vercel.svg" },
+                      { name: "Vitest", logo: "/logo-vitest.svg" },
+                      { name: "GitHub", logo: "/logo-github.svg" },
                     ].map((tool, index) => {
                       const isMobileFirstColumn = index % 2 === 0
                       const isDesktopFirstColumn = index % 4 === 0
