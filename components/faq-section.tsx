@@ -9,34 +9,34 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: "What is Brillance and who is it for?",
+    question: "Do I need an API key to try it?",
     answer:
-      "Brillance is a comprehensive billing automation platform designed for businesses that need custom contract management. It's perfect for SaaS companies, service providers, and enterprises looking to streamline their billing processes.",
+      "No. Demo mode runs canned scenes routed by text in English and Spanish, so you can preview the whole flow — voice, drawings and a sample lab — without any setup or key.",
   },
   {
-    question: "How does the custom contract billing work?",
+    question: "What kinematics topics does it cover today?",
     answer:
-      "Our platform automatically processes your custom contracts, calculates billing amounts based on your specific terms, and generates invoices. You can set up complex pricing structures, usage-based billing, and custom billing cycles.",
+      "MRU, MRUA, free fall, displacement vs distance and speed vs velocity. Each topic ships as a recipe shared by the model and the lab card, so the script and the on-screen feel stay in sync.",
   },
   {
-    question: "Can I integrate Brillance with my existing tools?",
+    question: "Does it work on desktop without a phone?",
     answer:
-      "Yes! Brillance integrates seamlessly with popular CRM systems, accounting software, and payment processors. We support APIs and webhooks for custom integrations with your existing workflow.",
+      "Yes. When there's no device-orientation sensor or no permission, a drag simulator replaces the tilt input. The rest of the flow — predict, measure, reflect — works the same way.",
   },
   {
-    question: "What kind of support do you provide?",
+    question: "Which languages are supported?",
     answer:
-      "We offer 24/7 customer support, dedicated account managers for enterprise clients, comprehensive documentation, and onboarding assistance to help you get started quickly.",
+      "English and Spanish, in the UI, the prompts, the voice and the lab cards. The toggle lives in the sidebar and updates everything at once, including the suggested chips.",
   },
   {
-    question: "Is my data secure with Brillance?",
+    question: "Where does my data go?",
     answer:
-      "Absolutely. We use enterprise-grade security measures including end-to-end encryption, SOC 2 compliance, and regular security audits. Your data is stored in secure, redundant data centers.",
+      "Topic progress lives in your browser via localStorage. The backend only sees a small summary so the agent doesn't repeat itself like a fixed script. Nothing personal, no accounts.",
   },
   {
-    question: "How do I get started with Brillance?",
+    question: "Can I self-host or fork it?",
     answer:
-      "Getting started is simple! Sign up for our free trial, connect your existing systems, and our onboarding team will help you set up your first custom billing workflow within 24 hours.",
+      "Yes. The repo is open source — clone it, add a Claude key in .env.local, and run pnpm dev. For sensors on mobile, an HTTPS tunnel (Cloudflare or similar) is recommended.",
   },
 ]
 
@@ -71,9 +71,9 @@ export default function FAQSection() {
             Frequently Asked Questions
           </div>
           <div className="w-full text-[#605A57] text-base font-normal leading-7 font-sans">
-            Explore your data, build your dashboard,
+            What teachers, students and judges usually ask
             <br className="hidden md:block" />
-            bring your team together.
+            before opening the demo.
           </div>
         </div>
 

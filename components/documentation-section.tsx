@@ -21,18 +21,18 @@ export default function DocumentationSection() {
 
   const cards = [
     {
-      title: "Plan your schedules",
-      description: "Explore your data, build your dashboard,\nbring your team together.",
+      title: "MRU & MRUA",
+      description: "Constant speed and uniform acceleration\nwith arrows that grow as the lesson advances.",
       image: "/modern-dashboard-interface-with-data-visualization.jpg",
     },
     {
-      title: "Data to insights in minutes",
-      description: "Transform raw data into actionable insights\nwith powerful analytics tools.",
+      title: "Free fall",
+      description: "Predict the time to ground, then release\nyour phone with a tilt to measure it.",
       image: "/analytics-dashboard.png",
     },
     {
-      title: "Collaborate seamlessly",
-      description: "Work together in real-time with your team\nand share insights instantly.",
+      title: "Velocity, not just speed",
+      description: "Side-by-side concept graphs to settle\ndistance vs displacement, once and for all.",
       image: "/team-collaboration-interface-with-shared-workspace.jpg",
     },
   ]
@@ -60,15 +60,15 @@ export default function DocumentationSection() {
             icon={
               <div className="w-[10.50px] h-[10.50px] outline outline-[1.17px] outline-[#37322F] outline-offset-[-0.58px] rounded-full"></div>
             }
-            text="Platform Features"
+            text="Topic recipes"
           />
           <div className="self-stretch text-center flex justify-center flex-col text-[#49423D] text-3xl md:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
-            Streamline your business operations
+            A lesson for every motion.
           </div>
           <div className="self-stretch text-center text-[#605A57] text-base font-normal leading-7 font-sans">
-            Manage schedules, analyze data, and collaborate with your team
+            Each topic is a recipe: voice, drawings and a mini-lab
             <br />
-            all in one powerful platform.
+            tuned to the moment the concept usually clicks.
           </div>
         </div>
       </div>

@@ -32,6 +32,7 @@ export default function LandingPage() {
   const mountedRef = useRef(true)
 
   useEffect(() => {
+    mountedRef.current = true
     const progressInterval = setInterval(() => {
       if (!mountedRef.current) return
 
@@ -42,19 +43,13 @@ export default function LandingPage() {
           }
           return 0
         }
-        return prev + 2 // 2% every 100ms = 5 seconds total
+        return prev + 2
       })
     }, 100)
 
     return () => {
+      mountedRef.current = false
       clearInterval(progressInterval)
-      mountedRef.current = false
-    }
-  }, [])
-
-  useEffect(() => {
-    return () => {
-      mountedRef.current = false
     }
   }, [])
 
@@ -62,19 +57,6 @@ export default function LandingPage() {
     if (!mountedRef.current) return
     setActiveCard(index)
     setProgress(0)
-  }
-
-  const getDashboardContent = () => {
-    switch (activeCard) {
-      case 0:
-        return <div className="text-[#828387] text-sm">Customer Subscription Status and Details</div>
-      case 1:
-        return <div className="text-[#828387] text-sm">Analytics Dashboard - Real-time Insights</div>
-      case 2:
-        return <div className="text-[#828387] text-sm">Data Visualization - Charts and Metrics</div>
-      default:
-        return <div className="text-[#828387] text-sm">Customer Subscription Status and Details</div>
-    }
   }
 
   return (
@@ -94,26 +76,26 @@ export default function LandingPage() {
               <div className="w-full h-0 absolute left-0 top-6 sm:top-7 md:top-8 lg:top-[42px] border-t border-[rgba(55,50,47,0.12)] shadow-[0px_1px_0px_white]"></div>
 
               <div className="w-full max-w-[calc(100%-32px)] sm:max-w-[calc(100%-48px)] md:max-w-[calc(100%-64px)] lg:max-w-[700px] lg:w-[700px] h-10 sm:h-11 md:h-12 py-1.5 sm:py-2 px-3 sm:px-4 md:px-4 pr-2 sm:pr-3 bg-[#F7F5F3] backdrop-blur-sm shadow-[0px_0px_0px_2px_white] overflow-hidden rounded-[50px] flex justify-between items-center relative z-30">
-                <div className="flex justify-center items-center">
-                  <div className="flex justify-start items-center">
-                    <div className="flex flex-col justify-center text-[#2F3037] text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-5 font-sans">
-                      Brillance
+                  <div className="flex justify-center items-center">
+                    <div className="flex justify-start items-center">
+                      <div className="flex flex-col justify-center text-[#2F3037] text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-5 font-sans">
+                      Edtools Labs
                     </div>
                   </div>
                   <div className="pl-3 sm:pl-4 md:pl-5 lg:pl-5 flex justify-start items-start hidden sm:flex flex-row gap-2 sm:gap-3 md:gap-4 lg:gap-4">
                     <div className="flex justify-start items-center">
                       <div className="flex flex-col justify-center text-[rgba(49,45,43,0.80)] text-xs md:text-[13px] font-medium leading-[14px] font-sans">
-                        Products
+                        How it feels
                       </div>
                     </div>
                     <div className="flex justify-start items-center">
                       <div className="flex flex-col justify-center text-[rgba(49,45,43,0.80)] text-xs md:text-[13px] font-medium leading-[14px] font-sans">
-                        Pricing
+                        Topics
                       </div>
                     </div>
                     <div className="flex justify-start items-center">
                       <div className="flex flex-col justify-center text-[rgba(49,45,43,0.80)] text-xs md:text-[13px] font-medium leading-[14px] font-sans">
-                        Docs
+                        GitHub
                       </div>
                     </div>
                   </div>
@@ -121,7 +103,7 @@ export default function LandingPage() {
                 <div className="h-6 sm:h-7 md:h-8 flex justify-start items-start gap-2 sm:gap-3">
                   <div className="px-2 sm:px-3 md:px-[14px] py-1 sm:py-[6px] bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center">
                     <div className="flex flex-col justify-center text-[#37322F] text-xs md:text-[13px] font-medium leading-5 font-sans">
-                      Log in
+                      Try the demo
                     </div>
                   </div>
                 </div>
@@ -133,14 +115,14 @@ export default function LandingPage() {
               <div className="w-full max-w-[937px] lg:w-[937px] flex flex-col justify-center items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6">
                 <div className="self-stretch rounded-[3px] flex flex-col justify-center items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8">
                   <div className="w-full max-w-[748.71px] lg:w-[748.71px] text-center flex justify-center flex-col text-[#37322F] text-[24px] xs:text-[28px] sm:text-[36px] md:text-[52px] lg:text-[80px] font-normal leading-[1.1] sm:leading-[1.15] md:leading-[1.2] lg:leading-24 font-serif px-2 sm:px-4 md:px-0">
-                    Effortless custom contract
+                    An AI that feels.
                     <br />
-                    billing by Brillance
+                    Sensors that teach.
                   </div>
                   <div className="w-full max-w-[506.08px] lg:w-[506.08px] text-center flex justify-center flex-col text-[rgba(55,50,47,0.80)] sm:text-lg md:text-xl leading-[1.4] sm:leading-[1.45] md:leading-[1.5] lg:leading-7 font-sans px-2 sm:px-4 md:px-0 lg:text-lg font-medium text-sm">
-                    Streamline your billing process with seamless automation
+                    Edtools Labs turns the sensors in your phone into a
                     <br className="hidden sm:block" />
-                    for every custom contract, tailored by Brillance.
+                    learning instrument. Voice, ink, motion — one flow.
                   </div>
                 </div>
               </div>
@@ -150,7 +132,7 @@ export default function LandingPage() {
                   <div className="h-10 sm:h-11 md:h-12 px-6 sm:px-8 md:px-10 lg:px-12 py-2 sm:py-[6px] relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center">
                     <div className="w-20 sm:w-24 md:w-28 lg:w-44 h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
                     <div className="flex flex-col justify-center text-white text-sm sm:text-base md:text-[15px] font-medium leading-5 font-sans">
-                      Start for free
+                      Try the demo
                     </div>
                   </div>
                 </div>
@@ -180,9 +162,10 @@ export default function LandingPage() {
                             activeCard === 0 ? "opacity-100 scale-100 blur-0" : "opacity-0 scale-95 blur-sm"
                           }`}
                         >
+                          {/* TODO: replace with real Edtools Labs canvas screenshot */}
                           <img
-                            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dsadsadsa.jpg-xTHS4hGwCWp2H5bTj8np6DXZUyrxX7.jpeg"
-                            alt="Schedules Dashboard - Customer Subscription Management"
+                            src="/modern-dashboard-interface-with-data-visualization.jpg"
+                            alt="Live whiteboard with synced voice"
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -193,9 +176,10 @@ export default function LandingPage() {
                             activeCard === 1 ? "opacity-100 scale-100 blur-0" : "opacity-0 scale-95 blur-sm"
                           }`}
                         >
+                          {/* TODO: replace with real Edtools Labs inline-lab screenshot */}
                           <img
                             src="/analytics-dashboard-with-charts-graphs-and-data-vi.jpg"
-                            alt="Analytics Dashboard"
+                            alt="Inline mini-lab inside the chat"
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -206,10 +190,11 @@ export default function LandingPage() {
                             activeCard === 2 ? "opacity-100 scale-100 blur-0" : "opacity-0 scale-95 blur-sm"
                           }`}
                         >
+                          {/* TODO: replace with real phone-as-sensor screenshot */}
                           <img
                             src="/data-visualization-dashboard-with-interactive-char.jpg"
-                            alt="Data Visualization Dashboard"
-                            className="w-full h-full object-contain" // Changed from object-cover to object-contain to preserve landscape aspect ratio
+                            alt="Phone-as-sensor session"
+                            className="w-full h-full object-contain"
                           />
                         </div>
                       </div>
@@ -234,22 +219,22 @@ export default function LandingPage() {
                 <div className="flex-1 px-0 sm:px-2 md:px-0 flex flex-col md:flex-row justify-center items-stretch gap-0">
                   {/* Feature Cards */}
                   <FeatureCard
-                    title="Plan your schedules"
-                    description="Streamline customer subscriptions and billing with automated scheduling tools."
+                    title="It speaks."
+                    description="Claude narrates short phrases in step with the strokes on the canvas. Subtitles included."
                     isActive={activeCard === 0}
                     progress={activeCard === 0 ? progress : 0}
                     onClick={() => handleCardClick(0)}
                   />
                   <FeatureCard
-                    title="Analytics & insights"
-                    description="Transform your business data into actionable insights with real-time analytics."
+                    title="It draws."
+                    description="Vectors, arrows and concept graphs land on a live whiteboard, perfectly synced with the voice."
                     isActive={activeCard === 1}
                     progress={activeCard === 1 ? progress : 0}
                     onClick={() => handleCardClick(1)}
                   />
                   <FeatureCard
-                    title="Collaborate seamlessly"
-                    description="Keep your team aligned with shared dashboards and collaborative workflows."
+                    title="It feels."
+                    description="Tilt your phone. Motion becomes data, predictions become measurements, abstractions become real."
                     isActive={activeCard === 2}
                     progress={activeCard === 2 ? progress : 0}
                     onClick={() => handleCardClick(2)}
@@ -290,15 +275,15 @@ export default function LandingPage() {
                           <rect x="9.5" y="5" width="1" height="1" fill="#37322F" />
                         </svg>
                       }
-                      text="Social Proof"
+                      text="Built with"
                     />
                     <div className="w-full max-w-[472.55px] text-center flex justify-center flex-col text-[#49423D] text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
-                      Confidence backed by results
+                      Quietly powerful. Openly built.
                     </div>
                     <div className="self-stretch text-center text-[#605A57] text-sm sm:text-base font-normal leading-6 sm:leading-7 font-sans">
-                      Our customers achieve more each day
+                      A standard browser stack. No install, no plugin —
                       <br className="hidden sm:block" />
-                      because their tools are simple, powerful, and clear.
+                      runs on any laptop or phone, on any classroom Wi-Fi.
                     </div>
                   </div>
                 </div>
@@ -318,19 +303,25 @@ export default function LandingPage() {
                   </div>
 
                   <div className="flex-1 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-0 border-l border-r border-[rgba(55,50,47,0.12)]">
-                    {/* Logo Grid - Responsive grid */}
-                    {Array.from({ length: 8 }).map((_, index) => {
+                    {[
+                      { name: "Claude", logo: "/horizon-icon.svg" },
+                      { name: "Next.js", logo: "/vercel-triangle-logo.jpg" },
+                      { name: "Excalidraw", logo: "/horizon-icon.svg" },
+                      { name: "Web Speech", logo: "/horizon-icon.svg" },
+                      { name: "Kokoro TTS", logo: "/horizon-icon.svg" },
+                      { name: "TypeScript", logo: "/horizon-icon.svg" },
+                      { name: "Tailwind", logo: "/tailwind-css-logo.png" },
+                      { name: "GitHub", logo: "/github-logo-icon.jpg" },
+                    ].map((tool, index) => {
                       const isMobileFirstColumn = index % 2 === 0
-                      const isMobileLastColumn = index % 2 === 1
                       const isDesktopFirstColumn = index % 4 === 0
                       const isDesktopLastColumn = index % 4 === 3
-                      const isMobileBottomRow = index >= 6
                       const isDesktopTopRow = index < 4
                       const isDesktopBottomRow = index >= 4
 
                       return (
                         <div
-                          key={index}
+                          key={tool.name}
                           className={`
                             h-24 xs:h-28 sm:h-32 md:h-36 lg:h-40 flex justify-center items-center gap-1 xs:gap-2 sm:gap-3
                             border-b border-[rgba(227,226,225,0.5)]
@@ -346,10 +337,10 @@ export default function LandingPage() {
                           `}
                         >
                           <div className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 relative shadow-[0px_-4px_8px_rgba(255,255,255,0.64)_inset] overflow-hidden rounded-full">
-                            <img src="/horizon-icon.svg" alt="Horizon" className="w-full h-full object-contain" />
+                            <img src={tool.logo} alt={tool.name} className="w-full h-full object-contain" />
                           </div>
                           <div className="text-center flex justify-center flex-col text-[#37322F] text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight md:leading-9 font-sans">
-                            Acute
+                            {tool.name}
                           </div>
                         </div>
                       )
@@ -387,12 +378,12 @@ export default function LandingPage() {
                       text="Bento grid"
                     />
                     <div className="w-full max-w-[598.06px] lg:w-[598.06px] text-center flex justify-center flex-col text-[#49423D] text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold leading-tight md:leading-[60px] font-sans tracking-tight">
-                      Built for absolute clarity and focused work
+                      A tutor that thinks with its hands.
                     </div>
                     <div className="self-stretch text-center text-[#605A57] text-sm sm:text-base font-normal leading-6 sm:leading-7 font-sans">
-                      Stay focused with tools that organize, connect
+                      Voice, ink and motion working together
                       <br />
-                      and turn information into confident decisions.
+                      so kinematics stops feeling abstract.
                     </div>
                   </div>
                 </div>
@@ -416,10 +407,10 @@ export default function LandingPage() {
                     <div className="border-b border-r-0 md:border-r border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6">
                       <div className="flex flex-col gap-2">
                         <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
-                          Smart. Simple. Brilliant.
+                          Voice in sync with the canvas.
                         </h3>
                         <p className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed font-sans">
-                          Your data is beautifully organized so you see everything clearly without the clutter.
+                          The model speaks before it draws. Subtitles and narration land together with each stroke on the board.
                         </p>
                       </div>
                       <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex items-center justify-center overflow-hidden">
@@ -436,10 +427,10 @@ export default function LandingPage() {
                     <div className="border-b border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6">
                       <div className="flex flex-col gap-2">
                         <h3 className="text-[#37322F] font-semibold leading-tight font-sans text-lg sm:text-xl">
-                          Your work, in sync
+                          Predict. Measure. Reflect.
                         </h3>
                         <p className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed font-sans">
-                          Every update flows instantly across your team and keeps collaboration effortless and fast.
+                          Every lab follows the same loop: pick a prediction, run a sensor session, and meet the truth on the other side.
                         </p>
                       </div>
                       <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex overflow-hidden text-right items-center justify-center">
@@ -456,10 +447,10 @@ export default function LandingPage() {
                     <div className="border-r-0 md:border-r border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6 bg-transparent">
                       <div className="flex flex-col gap-2">
                         <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
-                          Effortless integration
+                          Your phone, the instrument.
                         </h3>
                         <p className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed font-sans">
-                          All your favorite tools connect in one place and work together seamlessly by design.
+                          Live angle meter, haptic step feedback, session metrics. No sensor, no problem — a drag simulator keeps the flow on desktop.
                         </p>
                       </div>
                       <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex overflow-hidden justify-center items-center relative bg-transparent">
@@ -475,10 +466,10 @@ export default function LandingPage() {
                     <div className="p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6">
                       <div className="flex flex-col gap-2">
                         <h3 className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight font-sans">
-                          Numbers that speak
+                          Progress that remembers.
                         </h3>
                         <p className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed font-sans">
-                          Track growth with precision and turn raw data into confident decisions you can trust.
+                          Completed topics live in your browser and ship as a small summary, so the agent never repeats itself like a script.
                         </p>
                       </div>
                       <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex overflow-hidden items-center justify-center relative">
