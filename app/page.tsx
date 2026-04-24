@@ -310,7 +310,7 @@ export default function LandingPage() {
                       { name: "Tailwind", logo: "/logo-tailwindcss.svg" },
                       { name: "Excalidraw", logo: "/logo-excalidraw.svg" },
                       { name: "Vercel", logo: "/logo-vercel.svg" },
-                      { name: "Vitest", logo: "/logo-vitest.svg" },
+                      { name: "Edtools", logo: "/logo-edtools.svg" },
                       { name: "GitHub", logo: "/logo-github.svg" },
                     ].map((tool, index) => {
                       const isMobileFirstColumn = index % 2 === 0
