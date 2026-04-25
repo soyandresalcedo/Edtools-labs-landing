@@ -1,6 +1,6 @@
 "use client"
 
-const GITHUB_REPO = "https://github.com/soyandresalcedo/Edtools-labs-landing"
+import { APP_URL, EXTERNAL_TAB_REL, GITHUB_REPO_URL } from "../lib/site-urls"
 
 export default function CTASection() {
   return (
@@ -29,28 +29,28 @@ export default function CTASection() {
               Ready to feel it?
             </h2>
             <div className="self-stretch text-center text-[#605A57] text-base leading-7 font-sans font-medium">
-              Open the demo. Ask a question. Tilt your phone.
+              Opens in a new tab. Ask a question, tilt your phone, and let the tutor draw and speak in sync.
               <br />
-              Let kinematics meet you halfway.
+              No install — your browser is the lab.
             </div>
           </div>
           <div className="w-full max-w-[497px] flex flex-col justify-center items-center gap-12">
             <div className="flex flex-col sm:flex-row justify-center items-center gap-3">
               <a
-                href={GITHUB_REPO}
+                href={APP_URL}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel={EXTERNAL_TAB_REL}
                 className="h-10 px-12 py-[6px] relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center cursor-pointer hover:bg-[#2A2520] transition-colors"
               >
                 <div className="w-44 h-[41px] absolute left-0 top-0 bg-gradient-to-b from-[rgba(255,255,255,0)] to-[rgba(0,0,0,0.10)] mix-blend-multiply" />
                 <div className="flex flex-col justify-center text-white text-[13px] font-medium leading-5 font-sans">
-                  Try the demo
+                  Open the app
                 </div>
               </a>
               <a
-                href={GITHUB_REPO}
+                href={GITHUB_REPO_URL}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel={EXTERNAL_TAB_REL}
                 className="h-10 px-8 py-[6px] relative bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center cursor-pointer hover:bg-[#F7F5F3] transition-colors border border-[rgba(55,50,47,0.12)]"
               >
                 <div className="flex flex-col justify-center text-[#37322F] text-[13px] font-medium leading-5 font-sans">

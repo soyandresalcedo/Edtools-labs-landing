@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Inter, Instrument_Serif } from "next/font/google"
+import { APP_URL, GITHUB_REPO_URL, LANDING_URL } from "../lib/site-urls"
 import "./globals.css"
 
 const inter = Inter({
@@ -18,8 +19,7 @@ const instrumentSerif = Instrument_Serif({
   preload: true,
 })
 
-const SITE_URL = "https://labs.edtools.co"
-const REPO_URL = "https://github.com/soyandresalcedo/Edtools-labs-landing"
+const SITE_URL = LANDING_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -127,7 +127,7 @@ const jsonLd = {
         priceCurrency: "USD",
       },
       license: "https://www.gnu.org/licenses/gpl-3.0.html",
-      codeRepository: REPO_URL,
+      codeRepository: GITHUB_REPO_URL,
       programmingLanguage: ["TypeScript", "React"],
       audience: {
         "@type": "EducationalAudience",
@@ -144,7 +144,7 @@ const jsonLd = {
       name: "Edtools Labs",
       url: SITE_URL,
       logo: `${SITE_URL}/logo-edtools.svg`,
-      sameAs: [REPO_URL],
+      sameAs: [GITHUB_REPO_URL, APP_URL],
     },
   ],
 }

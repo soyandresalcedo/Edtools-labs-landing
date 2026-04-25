@@ -73,7 +73,7 @@ export default function FAQSection() {
           <div className="w-full text-[#605A57] text-base font-normal leading-7 font-sans">
             What teachers, students and judges usually ask
             <br className="hidden md:block" />
-            before opening the demo.
+            before opening the live app.
           </div>
         </div>
 

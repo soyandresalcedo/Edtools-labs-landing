@@ -1,11 +1,10 @@
 import type { MetadataRoute } from "next"
-
-const SITE_URL = "https://labs.edtools.co"
+import { LANDING_URL } from "../lib/site-urls"
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [{ userAgent: "*", allow: "/" }],
-    sitemap: `${SITE_URL}/sitemap.xml`,
-    host: SITE_URL,
+    sitemap: `${LANDING_URL}/sitemap.xml`,
+    host: LANDING_URL,
   }
 }

@@ -22,7 +22,7 @@
 
 ## How to use
 
-- Try the demo at https://labs.edtools.co.
+- Open the live app at https://app.labs.edtools.co (marketing site: https://labs.edtools.co).
 - Self-host by cloning the repo and configuring `.env.local`, or enabling demo mode for a no-key evaluation.
 - Mobile use is recommended over HTTPS so tilt sensors are available; a desktop slider fallback exists.
 

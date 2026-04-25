@@ -13,8 +13,7 @@ import FAQSection from "../components/faq-section"
 import PricingSection from "../components/pricing-section"
 import CTASection from "../components/cta-section"
 import FooterSection from "../components/footer-section"
-
-const GITHUB_REPO = "https://github.com/soyandresalcedo/Edtools-labs-landing"
+import { APP_URL, EXTERNAL_TAB_REL, GITHUB_REPO_URL } from "../lib/site-urls"
 
 // Reusable Badge Component
 function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
@@ -103,9 +102,9 @@ export default function LandingPage() {
                       Topics
                     </a>
                     <a
-                      href={GITHUB_REPO}
+                      href={GITHUB_REPO_URL}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel={EXTERNAL_TAB_REL}
                       className="flex flex-col justify-center text-[rgba(49,45,43,0.80)] text-[10px] xs:text-xs md:text-[13px] font-medium leading-[14px] font-sans no-underline whitespace-nowrap hover:text-[#37322F] transition-colors"
                     >
                       GitHub
@@ -114,11 +113,13 @@ export default function LandingPage() {
                 </nav>
                 <div className="h-6 sm:h-7 md:h-8 flex justify-start items-start gap-2 sm:gap-3">
                   <a
-                    href="#get-started"
+                    href={APP_URL}
+                    target="_blank"
+                    rel={EXTERNAL_TAB_REL}
                     className="px-2 sm:px-3 md:px-[14px] py-1 sm:py-[6px] bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center no-underline hover:bg-[#FBFAF9] transition-colors"
                   >
                     <span className="flex flex-col justify-center text-[#37322F] text-xs md:text-[13px] font-medium leading-5 font-sans">
-                      Try the demo
+                      Open the app
                     </span>
                   </a>
                 </div>
@@ -147,12 +148,14 @@ export default function LandingPage() {
               <div className="w-full max-w-[497px] lg:w-[497px] flex flex-col justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 relative z-10 mt-6 sm:mt-8 md:mt-10 lg:mt-12">
                 <div className="backdrop-blur-[8.25px] flex justify-start items-center gap-4">
                   <a
-                    href="#get-started"
+                    href={APP_URL}
+                    target="_blank"
+                    rel={EXTERNAL_TAB_REL}
                     className="h-10 sm:h-11 md:h-12 px-6 sm:px-8 md:px-10 lg:px-12 py-2 sm:py-[6px] relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center no-underline hover:bg-[#2A2520] transition-colors"
                   >
                     <div className="w-20 sm:w-24 md:w-28 lg:w-44 h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
                     <span className="flex flex-col justify-center text-white text-sm sm:text-base md:text-[15px] font-medium leading-5 font-sans">
-                      Try the demo
+                      Open the app
                     </span>
                   </a>
                 </div>

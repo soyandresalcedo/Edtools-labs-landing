@@ -1,11 +1,14 @@
 "use client"
 
+import { APP_URL, EXTERNAL_TAB_REL, GITHUB_REPO_URL } from "../lib/site-urls"
+
 type Plan = {
   name: string
   description: string
   badge: string
   bullets: string[]
   ctaLabel: string
+  ctaHref: string
   variant: "light" | "dark"
 }
 
@@ -21,7 +24,8 @@ const plans: Plan[] = [
       "Built-in voice with Web Speech",
       "Drag simulator on desktop",
     ],
-    ctaLabel: "Try the demo",
+    ctaLabel: "Open the app",
+    ctaHref: APP_URL,
     variant: "light",
   },
   {
@@ -39,6 +43,7 @@ const plans: Plan[] = [
       "Mobile sheet for the agent panel",
     ],
     ctaLabel: "Read the setup",
+    ctaHref: `${GITHUB_REPO_URL}#readme`,
     variant: "dark",
   },
   {
@@ -56,6 +61,7 @@ const plans: Plan[] = [
       "No vendor lock-in",
     ],
     ctaLabel: "Open on GitHub",
+    ctaHref: GITHUB_REPO_URL,
     variant: "light",
   },
 ]
@@ -120,20 +126,23 @@ function PlanCard({ plan }: { plan: Plan }) {
           </div>
         </div>
 
-        <div
-          className={`self-stretch px-4 py-[10px] relative shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center cursor-pointer ${
-            isDark ? "bg-[#FBFAF9]" : "bg-[#37322F]"
+        <a
+          href={plan.ctaHref}
+          target="_blank"
+          rel={EXTERNAL_TAB_REL}
+          className={`self-stretch px-4 py-[10px] relative shadow-[0px_2px_4px_rgba(55,50,47,0.12)] overflow-hidden rounded-[99px] flex justify-center items-center cursor-pointer no-underline ${
+            isDark ? "bg-[#FBFAF9] hover:bg-[#F0EFEE]" : "bg-[#37322F] hover:bg-[#2A2520]"
           }`}
         >
           <div className="w-full h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0.20)] to-[rgba(0,0,0,0.10)] mix-blend-multiply" />
-          <div
-            className={`flex justify-center flex-col text-[13px] font-medium leading-5 font-sans ${
+          <span
+            className={`relative flex justify-center flex-col text-[13px] font-medium leading-5 font-sans ${
               isDark ? "text-[#37322F]" : "text-[#FBFAF9]"
             }`}
           >
             {plan.ctaLabel}
-          </div>
-        </div>
+          </span>
+        </a>
       </div>
 
       <div className="self-stretch flex flex-col justify-start items-start gap-2">

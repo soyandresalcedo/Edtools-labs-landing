@@ -1,4 +1,4 @@
-const GITHUB_REPO = "https://github.com/soyandresalcedo/Edtools-labs-landing"
+import { APP_URL, EXTERNAL_TAB_REL, GITHUB_REPO_URL } from "../lib/site-urls"
 
 const linkClass =
   "text-[#49423D] text-sm font-normal leading-5 font-sans no-underline hover:text-[#37322F] transition-colors"
@@ -47,9 +47,9 @@ export default function FooterSection() {
 
             {/* GitHub */}
             <a
-              href={GITHUB_REPO}
+              href={GITHUB_REPO_URL}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={EXTERNAL_TAB_REL}
               className="w-6 h-6 relative overflow-hidden flex items-center justify-center rounded-sm hover:opacity-80 transition-opacity"
               aria-label="Edtools Labs on GitHub"
             >
@@ -76,13 +76,13 @@ export default function FooterSection() {
               <a href="#topics" className={linkClass}>
                 Topic recipes
               </a>
-              <a href="#get-started" className={linkClass}>
-                Try the demo
+              <a href={APP_URL} target="_blank" rel={EXTERNAL_TAB_REL} className={linkClass}>
+                Open the app
               </a>
               <a href="#get-started" className={linkClass}>
                 Bring your own key
               </a>
-              <a href={GITHUB_REPO} target="_blank" rel="noopener noreferrer" className={linkClass}>
+              <a href={GITHUB_REPO_URL} target="_blank" rel={EXTERNAL_TAB_REL} className={linkClass}>
                 Self-host
               </a>
             </div>
@@ -103,7 +103,7 @@ export default function FooterSection() {
               <a href="#how-it-feels" className={linkClass}>
                 Predict-measure-reflect
               </a>
-              <a href="#get-started" className={linkClass}>
+              <a href={APP_URL} target="_blank" rel={EXTERNAL_TAB_REL} className={linkClass}>
                 Demo without API key
               </a>
             </div>
@@ -112,16 +112,16 @@ export default function FooterSection() {
           <div className="flex flex-col justify-start items-start gap-3 flex-1 min-w-[120px]">
             <div className="text-[rgba(73,66,61,0.50)] text-sm font-medium leading-5 font-sans">Open source</div>
             <div className="flex flex-col justify-center items-start gap-2">
-              <a href={GITHUB_REPO} target="_blank" rel="noopener noreferrer" className={`self-stretch ${linkClass}`}>
+              <a href={GITHUB_REPO_URL} target="_blank" rel={EXTERNAL_TAB_REL} className={`self-stretch ${linkClass}`}>
                 GitHub
               </a>
-              <a href={`${GITHUB_REPO}#readme`} target="_blank" rel="noopener noreferrer" className={`self-stretch ${linkClass}`}>
+              <a href={`${GITHUB_REPO_URL}#readme`} target="_blank" rel={EXTERNAL_TAB_REL} className={`self-stretch ${linkClass}`}>
                 README
               </a>
-              <a href={GITHUB_REPO} target="_blank" rel="noopener noreferrer" className={`self-stretch ${linkClass}`}>
+              <a href={GITHUB_REPO_URL} target="_blank" rel={EXTERNAL_TAB_REL} className={`self-stretch ${linkClass}`}>
                 Built with Claude Opus 4.7
               </a>
-              <a href={`${GITHUB_REPO}/issues`} target="_blank" rel="noopener noreferrer" className={`self-stretch ${linkClass}`}>
+              <a href={`${GITHUB_REPO_URL}/issues`} target="_blank" rel={EXTERNAL_TAB_REL} className={`self-stretch ${linkClass}`}>
                 Open an issue
               </a>
               <a

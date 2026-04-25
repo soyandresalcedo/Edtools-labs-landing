@@ -1,11 +1,10 @@
 import type { MetadataRoute } from "next"
-
-const SITE_URL = "https://labs.edtools.co"
+import { LANDING_URL } from "../lib/site-urls"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: SITE_URL,
+      url: LANDING_URL,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
