@@ -14,6 +14,8 @@ import PricingSection from "../components/pricing-section"
 import CTASection from "../components/cta-section"
 import FooterSection from "../components/footer-section"
 
+const GITHUB_REPO = "https://github.com/soyandresalcedo/Edtools-labs-landing"
+
 // Reusable Badge Component
 function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
@@ -72,46 +74,61 @@ export default function LandingPage() {
 
           <div className="self-stretch pt-[9px] overflow-hidden border-b border-[rgba(55,50,47,0.06)] flex flex-col justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-[66px] relative z-10">
             {/* Navigation */}
-            <div className="w-full h-12 sm:h-14 md:h-16 lg:h-[84px] absolute left-0 top-0 flex justify-center items-center z-20 px-6 sm:px-8 md:px-12 lg:px-0">
+            <div className="w-full h-12 sm:h-14 md:h-16 lg:h-[84px] absolute left-0 top-0 flex flex-col justify-center items-center gap-1.5 sm:gap-2 z-20 px-6 sm:px-8 md:px-12 lg:px-0">
               <div className="w-full h-0 absolute left-0 top-6 sm:top-7 md:top-8 lg:top-[42px] border-t border-[rgba(55,50,47,0.12)] shadow-[0px_1px_0px_white]"></div>
 
-              <div className="w-full max-w-[calc(100%-32px)] sm:max-w-[calc(100%-48px)] md:max-w-[calc(100%-64px)] lg:max-w-[700px] lg:w-[700px] h-10 sm:h-11 md:h-12 py-1.5 sm:py-2 px-3 sm:px-4 md:px-4 pr-2 sm:pr-3 bg-[#F7F5F3] backdrop-blur-sm shadow-[0px_0px_0px_2px_white] overflow-hidden rounded-[50px] flex justify-between items-center relative z-30">
-                  <div className="flex justify-center items-center">
-                    <div className="flex justify-start items-center">
-                      <div className="flex flex-col justify-center text-[#2F3037] text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-5 font-sans">
+              <nav
+                aria-label="Primary"
+                className="w-full max-w-[calc(100%-32px)] sm:max-w-[calc(100%-48px)] md:max-w-[calc(100%-64px)] lg:max-w-[700px] lg:w-[700px] h-10 sm:h-11 md:h-12 py-1.5 sm:py-2 px-3 sm:px-4 md:px-4 pr-2 sm:pr-3 bg-[#F7F5F3] backdrop-blur-sm shadow-[0px_0px_0px_2px_white] overflow-hidden rounded-[50px] flex justify-between items-center relative z-30"
+              >
+                  <div className="flex justify-center items-center min-w-0 shrink">
+                    <a
+                      href="#top"
+                      className="flex flex-col justify-center text-[#2F3037] text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-5 font-sans no-underline hover:text-[#1a1c24] transition-colors truncate"
+                    >
                       Edtools Labs
-                    </div>
+                    </a>
                   </div>
-                  <div className="pl-3 sm:pl-4 md:pl-5 lg:pl-5 flex justify-start items-start hidden sm:flex flex-row gap-2 sm:gap-3 md:gap-4 lg:gap-4">
-                    <div className="flex justify-start items-center">
-                      <div className="flex flex-col justify-center text-[rgba(49,45,43,0.80)] text-xs md:text-[13px] font-medium leading-[14px] font-sans">
-                        How it feels
-                      </div>
-                    </div>
-                    <div className="flex justify-start items-center">
-                      <div className="flex flex-col justify-center text-[rgba(49,45,43,0.80)] text-xs md:text-[13px] font-medium leading-[14px] font-sans">
-                        Topics
-                      </div>
-                    </div>
-                    <div className="flex justify-start items-center">
-                      <div className="flex flex-col justify-center text-[rgba(49,45,43,0.80)] text-xs md:text-[13px] font-medium leading-[14px] font-sans">
-                        GitHub
-                      </div>
-                    </div>
+                  <div className="pl-2 sm:pl-4 md:pl-5 lg:pl-5 flex justify-end items-center flex-wrap flex-row gap-x-2 gap-y-0.5 sm:gap-x-3 md:gap-4 lg:gap-4 min-w-0">
+                    <a
+                      href="#how-it-feels"
+                      className="flex flex-col justify-center text-[rgba(49,45,43,0.80)] text-[10px] xs:text-xs md:text-[13px] font-medium leading-[14px] font-sans no-underline whitespace-nowrap hover:text-[#37322F] transition-colors"
+                    >
+                      How it feels
+                    </a>
+                    <a
+                      href="#topics"
+                      className="flex flex-col justify-center text-[rgba(49,45,43,0.80)] text-[10px] xs:text-xs md:text-[13px] font-medium leading-[14px] font-sans no-underline whitespace-nowrap hover:text-[#37322F] transition-colors"
+                    >
+                      Topics
+                    </a>
+                    <a
+                      href={GITHUB_REPO}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex flex-col justify-center text-[rgba(49,45,43,0.80)] text-[10px] xs:text-xs md:text-[13px] font-medium leading-[14px] font-sans no-underline whitespace-nowrap hover:text-[#37322F] transition-colors"
+                    >
+                      GitHub
+                    </a>
                   </div>
-                </div>
+                </nav>
                 <div className="h-6 sm:h-7 md:h-8 flex justify-start items-start gap-2 sm:gap-3">
-                  <div className="px-2 sm:px-3 md:px-[14px] py-1 sm:py-[6px] bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center">
-                    <div className="flex flex-col justify-center text-[#37322F] text-xs md:text-[13px] font-medium leading-5 font-sans">
+                  <a
+                    href="#get-started"
+                    className="px-2 sm:px-3 md:px-[14px] py-1 sm:py-[6px] bg-white shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center no-underline hover:bg-[#FBFAF9] transition-colors"
+                  >
+                    <span className="flex flex-col justify-center text-[#37322F] text-xs md:text-[13px] font-medium leading-5 font-sans">
                       Try the demo
-                    </div>
-                  </div>
+                    </span>
+                  </a>
                 </div>
-              </div>
             </div>
 
             {/* Hero Section */}
-            <div className="pt-16 sm:pt-20 md:pt-24 lg:pt-[216px] pb-8 sm:pb-12 md:pb-16 flex flex-col justify-start items-center px-2 sm:px-4 md:px-8 lg:px-0 w-full sm:pl-0 sm:pr-0 pl-0 pr-0">
+            <div
+              id="top"
+              className="scroll-mt-24 pt-16 sm:pt-20 md:pt-24 lg:pt-[216px] pb-8 sm:pb-12 md:pb-16 flex flex-col justify-start items-center px-2 sm:px-4 md:px-8 lg:px-0 w-full sm:pl-0 sm:pr-0 pl-0 pr-0"
+            >
               <div className="w-full max-w-[937px] lg:w-[937px] flex flex-col justify-center items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6">
                 <div className="self-stretch rounded-[3px] flex flex-col justify-center items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8">
                   <h1 className="w-full max-w-[748.71px] lg:w-[748.71px] m-0 text-center text-[#37322F] text-[24px] xs:text-[28px] sm:text-[36px] md:text-[52px] lg:text-[80px] font-normal leading-[1.1] sm:leading-[1.15] md:leading-[1.2] lg:leading-24 font-serif px-2 sm:px-4 md:px-0">
@@ -129,12 +146,15 @@ export default function LandingPage() {
 
               <div className="w-full max-w-[497px] lg:w-[497px] flex flex-col justify-center items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 relative z-10 mt-6 sm:mt-8 md:mt-10 lg:mt-12">
                 <div className="backdrop-blur-[8.25px] flex justify-start items-center gap-4">
-                  <div className="h-10 sm:h-11 md:h-12 px-6 sm:px-8 md:px-10 lg:px-12 py-2 sm:py-[6px] relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center">
+                  <a
+                    href="#get-started"
+                    className="h-10 sm:h-11 md:h-12 px-6 sm:px-8 md:px-10 lg:px-12 py-2 sm:py-[6px] relative bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] overflow-hidden rounded-full flex justify-center items-center no-underline hover:bg-[#2A2520] transition-colors"
+                  >
                     <div className="w-20 sm:w-24 md:w-28 lg:w-44 h-[41px] absolute left-0 top-[-0.5px] bg-gradient-to-b from-[rgba(255,255,255,0)] to-[rgba(0,0,0,0.10)] mix-blend-multiply"></div>
-                    <div className="flex flex-col justify-center text-white text-sm sm:text-base md:text-[15px] font-medium leading-5 font-sans">
+                    <span className="flex flex-col justify-center text-white text-sm sm:text-base md:text-[15px] font-medium leading-5 font-sans">
                       Try the demo
-                    </div>
-                  </div>
+                    </span>
+                  </a>
                 </div>
               </div>
 
@@ -362,7 +382,10 @@ export default function LandingPage() {
               </div>
 
               {/* Bento Grid Section */}
-              <div className="w-full border-b border-[rgba(55,50,47,0.12)] flex flex-col justify-center items-center">
+              <div
+                id="how-it-feels"
+                className="scroll-mt-24 w-full border-b border-[rgba(55,50,47,0.12)] flex flex-col justify-center items-center"
+              >
                 {/* Header Section */}
                 <div className="self-stretch px-4 sm:px-6 md:px-8 lg:px-0 lg:max-w-[1060px] lg:w-[1060px] py-8 sm:py-12 md:py-16 border-b border-[rgba(55,50,47,0.12)] flex justify-center items-center gap-6">
                   <div className="w-full max-w-[616px] lg:w-[616px] px-4 sm:px-6 py-4 sm:py-5 shadow-[0px_2px_4px_rgba(50,45,43,0.06)] overflow-hidden rounded-lg flex flex-col justify-start items-center gap-3 sm:gap-4 shadow-none">
