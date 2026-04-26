@@ -9,6 +9,3 @@ export const GITHUB_REPO_URL = "https://github.com/soyandresalcedo/Edtools-labs-
 
 /** Use with `target="_blank"` on cross-origin links (tab-nabbing mitigation). */
 export const EXTERNAL_TAB_REL = "noopener noreferrer" as const
-
-/** YouTube video embedded in the landing hero (demo / walkthrough). */
-export const HERO_DEMO_YOUTUBE_VIDEO_ID = "3KAeiqsVQq8" as const

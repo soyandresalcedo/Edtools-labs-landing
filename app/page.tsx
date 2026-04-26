@@ -13,12 +13,7 @@ import FAQSection from "../components/faq-section"
 import PricingSection from "../components/pricing-section"
 import CTASection from "../components/cta-section"
 import FooterSection from "../components/footer-section"
-import {
-  APP_URL,
-  EXTERNAL_TAB_REL,
-  GITHUB_REPO_URL,
-  HERO_DEMO_YOUTUBE_VIDEO_ID,
-} from "../lib/site-urls"
+import { APP_URL, EXTERNAL_TAB_REL, GITHUB_REPO_URL } from "../lib/site-urls"
 
 // Reusable Badge Component
 function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
@@ -183,7 +178,7 @@ export default function LandingPage() {
                     <div className="relative w-full h-full min-h-0 bg-black">
                       <iframe
                         className="absolute inset-0 w-full h-full border-0"
-                        src={`https://www.youtube-nocookie.com/embed/${HERO_DEMO_YOUTUBE_VIDEO_ID}?rel=0`}
+                        src="https://www.youtube.com/embed/3KAeiqsVQq8?rel=0"
                         title="Demostración de Edtools Labs en YouTube"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
