@@ -36,9 +36,9 @@ export default function TestimonialsSection() {
     },
     {
       quote:
-        "Open source, voice-aligned canvas, demo without an API key. This is the kind of EdTech I'd ship.",
-      name: "Devin Park",
-      company: "Hackathon judge, EdTech track",
+        "Voice and drawings stay tied together—I’m not toggling between a chatbot and a whiteboard. For kinematics, that continuity is the point.",
+      name: "Renata Correa",
+      company: "STEM department, regional high school",
       image: "/testimonial-avatar-3.jpg",
     },
   ]
