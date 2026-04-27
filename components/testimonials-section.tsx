@@ -36,9 +36,9 @@ export default function TestimonialsSection() {
     },
     {
       quote:
-        "Voice and drawings stay tied together—I’m not toggling between a chatbot and a whiteboard. For kinematics, that continuity is the point.",
-      name: "Renata Correa",
-      company: "STEM department, regional high school",
+        "Voice and drawings stay tied together—no bouncing between a chat window and a whiteboard. For kinematics, that continuity matches how I teach.",
+      name: "High school educator",
+      company: "Anonymous pilot feedback",
       image: "/testimonial-avatar-3.jpg",
     },
   ]
